@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 import { greeting, askQuestion } from '../../src/cli.js';
-
-const getRandomPositiveInt = (max) => Math.floor(Math.random() * max) + 1;
+import { getRandomPositiveInt } from '../../src/math-utils.js';
 
 const name = greeting();
 const maxNumber = 1000;
