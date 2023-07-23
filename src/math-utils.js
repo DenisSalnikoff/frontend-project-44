@@ -27,3 +27,12 @@ export const getProgressionArray = (startNumber, step, stepCount) => {
   }
   return result;
 };
+
+export const isPrimeNumber = (number) => {
+  if (number < 2) return false;
+  const halfNumber = Math.floor(number / 2);
+  for (let i = 2; i <= halfNumber; i += 1) {
+    if (number % i === 0) return false;
+  }
+  return true;
+};
