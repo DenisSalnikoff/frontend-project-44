@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { greeting, askQuestion } from '../../src/cli.js';
+import { greeting, askQuestion, congratulations } from '../../src/cli.js';
 import { getRandomPositiveInt } from '../../src/math-utils.js';
 
 const name = greeting();
@@ -12,4 +12,4 @@ for (count = 0; count < winCount; count += 1) {
   const correctAnswer = randomNumber % 2 ? 'no' : 'yes';
   if (!askQuestion(condition, randomNumber, correctAnswer, name)) break;
 }
-if (count === 3) console.log(`Congratulations, ${name}!`);
+if (count === 3) congratulations();
