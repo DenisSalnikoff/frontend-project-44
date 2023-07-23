@@ -12,3 +12,10 @@ export const getRandomMathSign = () => {
       return '!error';
   }
 };
+
+const euclideanAlgorithm = (a, b) => {
+  if (!b) return a;
+  return euclideanAlgorithm(b, a % b);
+};
+
+export const getGCD = (x, y) => ((x >= y) ? euclideanAlgorithm(x, y) : euclideanAlgorithm(x, y));

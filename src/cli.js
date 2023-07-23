@@ -19,3 +19,7 @@ export const askQuestion = (condition, question, correctAnswer, name) => {
   }
   return correct;
 };
+
+export const congratulations = (name) => {
+  console.log(`Congratulations, ${name}!`);
+};
