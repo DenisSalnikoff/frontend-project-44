@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { greeting, askQuestion } from '../../src/cli.js';
-import { getRandomPositiveInt, getRandomMathSign} from '../../src/math-utils.js';
+import { greeting, askQuestion, congratulations } from '../../src/cli.js';
+import { getRandomPositiveInt, getRandomMathSign } from '../../src/math-utils.js';
 
 const name = greeting();
 const maxNumberHard = 99;
@@ -16,17 +16,17 @@ for (count = 0; count < winCount; count += 1) {
   let correctAnswer;
   switch (sign) {
     case '+':
-      correctAnswer = (first + second).toString();
+      correctAnswer = (first + second);
       break;
     case '-':
-      correctAnswer = (first - second).toString();
+      correctAnswer = (first - second);
       break;
     case '*':
-      correctAnswer = (first * second).toString();
+      correctAnswer = (first * second);
       break;
     default:
       correctAnswer = '!error';
   }
-  if (!askQuestion(condition, question, correctAnswer, name)) break;
+  if (!askQuestion(condition, question, correctAnswer.toString(), name)) break;
 }
-if (count === 3) console.log(`Congratulations, ${name}!`);
+if (count === 3) congratulations();
