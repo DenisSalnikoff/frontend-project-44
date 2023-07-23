@@ -18,4 +18,4 @@ const euclideanAlgorithm = (a, b) => {
   return euclideanAlgorithm(b, a % b);
 };
 
-export const getGCD = (x, y) => ((x >= y) ? euclideanAlgorithm(x, y) : euclideanAlgorithm(x, y));
+export const getGCD = (x, y) => ((x >= y) ? euclideanAlgorithm(x, y) : euclideanAlgorithm(y, x));
