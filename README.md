@@ -16,7 +16,7 @@
 System requirement: everyone
 
 USER GUIDE
-install: run 'make user-install'
+install: run 'make user-install'/n
 brain-games: run 'brain-games'
 brain-even: run 'brain-even'
 brain-calc: run 'brain-calc'
