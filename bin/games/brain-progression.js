@@ -5,8 +5,8 @@ import { getRandomPositiveInt, getProgressionArray } from '../../src/math-utils.
 // Parametrs
 const maxStartNumber = 50;
 const maxStep = 10;
-const minStepCount = 5;
-const maxStepCount = 15;
+const minStepsCount = 5;
+const maxStepsCount = 15;
 const winCount = 3;
 const condition = 'What number is missing in the progression?';
 
@@ -16,7 +16,7 @@ let count;
 for (count = 0; count < winCount; count += 1) {
   const startNumber = getRandomPositiveInt(maxStartNumber);
   const step = getRandomPositiveInt(maxStep);
-  const stepCount = getRandomPositiveInt(maxStepCount - minStepCount + 1) + minStepCount - 1;
+  const stepCount = getRandomPositiveInt(maxStepsCount - minStepsCount + 1) + minStepsCount - 1;
   const progressionArray = getProgressionArray(startNumber, step, stepCount);
   const deleteElementIndex = getRandomPositiveInt(stepCount) - 1;
   const correctAnswer = progressionArray[deleteElementIndex];
