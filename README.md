@@ -3,12 +3,29 @@
 ### CodeClimat:
 [![Maintainability](https://api.codeclimate.com/v1/badges/d8a56c1289bab455b5c3/maintainability)](https://codeclimate.com/github/DenisSalnikoff/frontend-project-44/maintainability)
 ### Install project and brain-even:
-[![Actions Status](https://asciinema.org/a/bdNwU531D9wLubOFtpH0ARL7z)]
+[![click to open](https://asciinema.org/a/bdNwU531D9wLubOFtpH0ARL7z)]
 ### Brain-calc:
-[![Actions Status](https://asciinema.org/a/xLyq6g1gwW8MHYxrdramXmgPV)]
+[![click to open](https://asciinema.org/a/xLyq6g1gwW8MHYxrdramXmgPV)]
 ### Brain-gcd:
-[![Actions Status](https://asciinema.org/a/GnuEsdBYOh6yrWm7tAsdDP9Ia)]
+[![click to open](https://asciinema.org/a/GnuEsdBYOh6yrWm7tAsdDP9Ia)]
 ### Brain-progression:
-[![Actions Status](https://asciinema.org/a/8qv480NXtSSqePMwCjyfIMr2d)]
+[![click to open](https://asciinema.org/a/8qv480NXtSSqePMwCjyfIMr2d)]
 ### Brain-prime:
-[![Actions Status](https://asciinema.org/a/g2jdO5VegHl6j9OIxozHtzt2w)]
+[![click to open](https://asciinema.org/a/g2jdO5VegHl6j9OIxozHtzt2w)]
+
+System requirement: everyone
+
+USER GUIDE
+install: run 'make user-install'
+brain-games: run 'brain-games'
+brain-even: run 'brain-even'
+brain-calc: run 'brain-calc'
+brain-gcd: run 'brain-gcd'
+brain-progression: run 'brain-progression'
+brain-prime: run 'brain-prime'
+follow the in-game instructions
+
+DEVELOPER GUIDE
+dev-install: run 'make install'
+publish: run 'make publish'
+linter review: run 'make lint'
