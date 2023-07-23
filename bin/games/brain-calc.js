@@ -27,6 +27,6 @@ for (count = 0; count < winCount; count += 1) {
     default:
       correctAnswer = '!error';
   }
-  if (!askQuestion(condition, question, correctAnswer.toString(), name)) break;
+  if (!askQuestion(condition, question, correctAnswer, name)) break;
 }
 if (count === 3) congratulations();

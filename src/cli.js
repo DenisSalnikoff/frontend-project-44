@@ -10,7 +10,7 @@ export const askQuestion = (condition, question, correctAnswer, name) => {
   console.log(condition);
   console.log(`Question: ${question}`);
   const answer = readlineSync.question('Your answer: ');
-  const correct = answer.trim().toLocaleLowerCase() === correctAnswer;
+  const correct = answer.trim().toLocaleLowerCase() === correctAnswer.toString();
   if (correct) {
     console.log('Correct!');
   } else {

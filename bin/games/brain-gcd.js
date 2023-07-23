@@ -12,6 +12,6 @@ for (count = 0; count < winCount; count += 1) {
   const second = getRandomPositiveInt(maxNumber);
   const question = `${first} ${second}`;
   const correctAnswer = getGCD(first, second);
-  if (!askQuestion(condition, question, correctAnswer.toString(), name)) break;
+  if (!askQuestion(condition, question, correctAnswer, name)) break;
 }
 if (count === winCount) congratulations();
