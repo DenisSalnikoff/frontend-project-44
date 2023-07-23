@@ -2,10 +2,13 @@
 import { greeting, askQuestion, congratulations } from '../../src/cli.js';
 import { getRandomPositiveInt, getGCD } from '../../src/math-utils.js';
 
-const name = greeting();
+// Parametrs
 const maxNumber = 99;
 const winCount = 3;
 const condition = 'Find the greatest common divisor of given numbers.';
+
+// Algorithm
+const name = greeting();
 let count;
 for (count = 0; count < winCount; count += 1) {
   const first = getRandomPositiveInt(maxNumber);

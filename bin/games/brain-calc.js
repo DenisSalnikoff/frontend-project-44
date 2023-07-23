@@ -2,11 +2,14 @@
 import { greeting, askQuestion, congratulations } from '../../src/cli.js';
 import { getRandomPositiveInt, getRandomMathSign } from '../../src/math-utils.js';
 
-const name = greeting();
+// Parametrs
 const maxNumberHard = 99;
 const maxNumberSimple = 9;
 const winCount = 3;
 const condition = 'What is the result of the expression?';
+
+// Algorithm
+const name = greeting();
 let count;
 for (count = 0; count < winCount; count += 1) {
   const first = getRandomPositiveInt(maxNumberHard);

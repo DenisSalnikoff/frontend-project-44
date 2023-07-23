@@ -2,13 +2,16 @@
 import { greeting, askQuestion, congratulations } from '../../src/cli.js';
 import { getRandomPositiveInt, getProgressionArray } from '../../src/math-utils.js';
 
-const name = greeting();
+// Parametrs
 const maxStartNumber = 50;
 const maxStep = 10;
 const minStepCount = 5;
 const maxStepCount = 15;
 const winCount = 3;
 const condition = 'What number is missing in the progression?';
+
+// Algorithm
+const name = greeting();
 let count;
 for (count = 0; count < winCount; count += 1) {
   const startNumber = getRandomPositiveInt(maxStartNumber);
