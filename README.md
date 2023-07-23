@@ -3,15 +3,15 @@
 ### CodeClimat:
 [![Maintainability](https://api.codeclimate.com/v1/badges/d8a56c1289bab455b5c3/maintainability)](https://codeclimate.com/github/DenisSalnikoff/frontend-project-44/maintainability)
 ### Install project and brain-even:
-[![click to open]](https://asciinema.org/a/bdNwU531D9wLubOFtpH0ARL7z)
+[click to open](https://asciinema.org/a/bdNwU531D9wLubOFtpH0ARL7z)
 ### Brain-calc:
-[![click to open]](https://asciinema.org/a/xLyq6g1gwW8MHYxrdramXmgPV)
+[click to open](https://asciinema.org/a/xLyq6g1gwW8MHYxrdramXmgPV)
 ### Brain-gcd:
-[![click to open]](https://asciinema.org/a/GnuEsdBYOh6yrWm7tAsdDP9Ia)
+[click to open](https://asciinema.org/a/GnuEsdBYOh6yrWm7tAsdDP9Ia)
 ### Brain-progression:
-[![click to open]](https://asciinema.org/a/8qv480NXtSSqePMwCjyfIMr2d)
+[click to open](https://asciinema.org/a/8qv480NXtSSqePMwCjyfIMr2d)
 ### Brain-prime:
-[![click to open]](https://asciinema.org/a/g2jdO5VegHl6j9OIxozHtzt2w)
+[click to open](https://asciinema.org/a/g2jdO5VegHl6j9OIxozHtzt2w)
 
 System requirement: any system will do
 
