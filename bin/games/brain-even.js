@@ -12,4 +12,4 @@ for (count = 0; count < winCount; count += 1) {
   const correctAnswer = randomNumber % 2 ? 'no' : 'yes';
   if (!askQuestion(condition, randomNumber, correctAnswer, name)) break;
 }
-if (count === 3) congratulations();
+if (count === 3) congratulations(name);

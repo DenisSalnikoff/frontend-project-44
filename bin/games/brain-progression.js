@@ -20,4 +20,4 @@ for (count = 0; count < winCount; count += 1) {
   progressionArray[deleteElementIndex] = '..';
   if (!askQuestion(condition, progressionArray.join(' '), correctAnswer, name)) break;
 }
-if (count === winCount) congratulations();
+if (count === winCount) congratulations(name);

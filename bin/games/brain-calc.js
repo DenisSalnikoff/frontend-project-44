@@ -29,4 +29,4 @@ for (count = 0; count < winCount; count += 1) {
   }
   if (!askQuestion(condition, question, correctAnswer, name)) break;
 }
-if (count === 3) congratulations();
+if (count === 3) congratulations(name);

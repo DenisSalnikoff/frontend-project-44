@@ -14,4 +14,4 @@ for (count = 0; count < winCount; count += 1) {
   const correctAnswer = getGCD(first, second);
   if (!askQuestion(condition, question, correctAnswer, name)) break;
 }
-if (count === winCount) congratulations();
+if (count === winCount) congratulations(name);
