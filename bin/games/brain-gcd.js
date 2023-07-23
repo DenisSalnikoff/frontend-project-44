@@ -3,7 +3,7 @@ import { greeting, askQuestion, congratulations } from '../../src/cli.js';
 import { getRandomPositiveInt, getGCD } from '../../src/math-utils.js';
 
 // Parametrs
-const maxNumber = 99;
+const maxQuestionNumber = 99;
 const winCount = 3;
 const condition = 'Find the greatest common divisor of given numbers.';
 
@@ -11,10 +11,10 @@ const condition = 'Find the greatest common divisor of given numbers.';
 const name = greeting();
 let count;
 for (count = 0; count < winCount; count += 1) {
-  const first = getRandomPositiveInt(maxNumber);
-  const second = getRandomPositiveInt(maxNumber);
-  const question = `${first} ${second}`;
-  const correctAnswer = getGCD(first, second);
+  const firstNumber = getRandomPositiveInt(maxQuestionNumber);
+  const secondNumber = getRandomPositiveInt(maxQuestionNumber);
+  const question = `${firstNumber} ${secondNumber}`;
+  const correctAnswer = getGCD(firstNumber, firstNumber);
   if (!askQuestion(condition, question, correctAnswer, name)) break;
 }
 if (count === winCount) congratulations(name);

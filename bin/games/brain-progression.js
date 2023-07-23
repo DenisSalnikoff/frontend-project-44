@@ -21,6 +21,7 @@ for (count = 0; count < winCount; count += 1) {
   const deleteElementIndex = getRandomPositiveInt(stepCount) - 1;
   const correctAnswer = progressionArray[deleteElementIndex];
   progressionArray[deleteElementIndex] = '..';
-  if (!askQuestion(condition, progressionArray.join(' '), correctAnswer, name)) break;
+  const question = progressionArray.join(' ');
+  if (!askQuestion(condition, question, correctAnswer, name)) break;
 }
 if (count === winCount) congratulations(name);
