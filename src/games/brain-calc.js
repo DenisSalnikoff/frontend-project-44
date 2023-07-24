@@ -47,7 +47,7 @@ export default () => {
     const second = (sign === '*') ? getRandomPositiveInt(maxNumberSimple) : getRandomPositiveInt(maxNumberHard);
     const question = `${first} ${sign} ${second}`;
     const correctAnswer = makeCalc(first, sign, second);
-    if (!askQuestion(condition, question, correctAnswer, name)) break;
+    if (!askQuestion(condition, question, correctAnswer, name)) return;
   }
-  if (count === 3) congratulations(name);
+  congratulations(name);
 };

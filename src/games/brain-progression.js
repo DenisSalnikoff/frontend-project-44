@@ -33,7 +33,7 @@ export default () => {
     const correctAnswer = progressionArray[deleteElementIndex];
     progressionArray[deleteElementIndex] = '..';
     const question = progressionArray.join(' ');
-    if (!askQuestion(condition, question, correctAnswer, name)) break;
+    if (!askQuestion(condition, question, correctAnswer, name)) return;
   }
-  if (count === winCount) congratulations(name);
+  congratulations(name);
 };

@@ -23,7 +23,7 @@ export default () => {
     const secondNumber = getRandomPositiveInt(maxQuestionNumber);
     const question = `${firstNumber} ${secondNumber}`;
     const correctAnswer = getGCD(firstNumber, secondNumber);
-    if (!askQuestion(condition, question, correctAnswer, name)) break;
+    if (!askQuestion(condition, question, correctAnswer, name)) return;
   }
-  if (count === winCount) congratulations(name);
+  congratulations(name);
 };

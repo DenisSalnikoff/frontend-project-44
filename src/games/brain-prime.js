@@ -26,7 +26,7 @@ export default () => {
   for (count = 0; count < winCount; count += 1) {
     const question = getRandomPositiveInt(maxQuestionNumber);
     const correctAnswer = isPrimeNumber(question) ? 'yes' : 'no';
-    if (!askQuestion(condition, question, correctAnswer, name)) break;
+    if (!askQuestion(condition, question, correctAnswer, name)) return;
   }
-  if (count === 3) congratulations(name);
+  congratulations(name);
 };
