@@ -12,15 +12,14 @@
 ### Description:
 ---
 *This is an educational project at the Hexlet school. It is a set of boring math games, 
-with a dull console interface. It will allow you to immerse yourself in the horrors of 
-IT of the 80s and 90s. Once I wrote this in one bat file. But now I've been forced to 
+with a dull console interface. It will allow you to immerse yourself in the of uncomfortable and not user-friendly software of the 80s and 90s. Once I wrote this in one bat file. But now I've been forced to 
 do it as a whole project and even write this README =)*
 
-### Requirement:
+### Requirements:
 ---
 
-**System requirement:** *any system will do*  
-**Programm requirement:** *node.js, npm*
+**Systems:** *any system will do*  
+**Programms:** *node.js, npm*
 
 ### USER GUIDE
 ---
