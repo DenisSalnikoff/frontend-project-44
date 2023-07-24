@@ -32,7 +32,6 @@ do it as a whole project and even write this README =)*
 - **launch brain-gcd:** *run* `brain-gcd`
 - **launch brain-progression:** *run* `brain-progression`
 - **launch brain-prime:** *run* `brain-prime`
----
 *After the launch follow the in-game instructions*
 
 ### DEVELOPER GUIDE
