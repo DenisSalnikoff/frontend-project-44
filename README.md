@@ -35,7 +35,7 @@ do it as a whole project and even write this README =)*
 ---
 *After the launch follow the in-game instructions*
 
-###DEVELOPER GUIDE
+### DEVELOPER GUIDE
 ---
 
 - **dev-install:** *run* `make install`
