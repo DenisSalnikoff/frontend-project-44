@@ -20,10 +20,11 @@ const getQuestionAndAnswer = () => {
   // Parameters
   const maxNumberHard = 99;
   const maxNumberSimple = 9;
+  const mathSigns = ['+', '-', '*'];
 
   // Algorithm
   const first = getRandomPositiveInt(maxNumberHard);
-  const sign = ['+', '-', '*'].at(getRandomPositiveInt(3) - 1);
+  const sign = mathSigns[getRandomPositiveInt(3) - 1];
   const second = (sign === '*') ? getRandomPositiveInt(maxNumberSimple) : getRandomPositiveInt(maxNumberHard);
   const question = `${first} ${sign} ${second}`;
   const correctAnswer = makeCalc(first, sign, second);
