@@ -1,8 +1,6 @@
 import {
-  greeting,
-  askQuestion,
-  congratulations,
   getRandomPositiveInt,
+  runGame,
 } from '../index.js';
 
 const isPrimeNumber = (number) => {
@@ -14,19 +12,17 @@ const isPrimeNumber = (number) => {
   return true;
 };
 
-export default () => {
-  // Parametrs
+const getQuestionAndAnswer = () => {
+  // Parameters
   const maxQuestionNumber = 99;
-  const winCount = 3;
-  const condition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
   // Algorithm
-  const name = greeting();
-  let count;
-  for (count = 0; count < winCount; count += 1) {
-    const question = getRandomPositiveInt(maxQuestionNumber);
-    const correctAnswer = isPrimeNumber(question) ? 'yes' : 'no';
-    if (!askQuestion(condition, question, correctAnswer, name)) return;
-  }
-  congratulations(name);
+  const question = getRandomPositiveInt(maxQuestionNumber);
+  const correctAnswer = isPrimeNumber(question) ? 'yes' : 'no';
+  return [question, correctAnswer];
+};
+
+export default () => {
+  const condition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  runGame(getQuestionAndAnswer, condition);
 };

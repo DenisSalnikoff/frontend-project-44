@@ -1,8 +1,6 @@
 import {
-  greeting,
-  askQuestion,
-  congratulations,
   getRandomPositiveInt,
+  runGame,
 } from '../index.js';
 
 const getProgressionArray = (startNumber, step, stepCount) => {
@@ -12,28 +10,27 @@ const getProgressionArray = (startNumber, step, stepCount) => {
   }
   return result;
 };
-export default () => {
-  // Parametrs
+
+const getQuestionAndAnswer = () => {
+  // Parameters
   const maxStartNumber = 50;
   const maxStep = 10;
   const minStepsCount = 5;
   const maxStepsCount = 15;
-  const winCount = 3;
-  const condition = 'What number is missing in the progression?';
 
   // Algorithm
-  const name = greeting();
-  let count;
-  for (count = 0; count < winCount; count += 1) {
-    const startNumber = getRandomPositiveInt(maxStartNumber);
-    const step = getRandomPositiveInt(maxStep);
-    const stepsCount = getRandomPositiveInt(maxStepsCount - minStepsCount + 1) + minStepsCount - 1;
-    const progressionArray = getProgressionArray(startNumber, step, stepsCount);
-    const deleteElementIndex = getRandomPositiveInt(stepsCount) - 1;
-    const correctAnswer = progressionArray[deleteElementIndex];
-    progressionArray[deleteElementIndex] = '..';
-    const question = progressionArray.join(' ');
-    if (!askQuestion(condition, question, correctAnswer, name)) return;
-  }
-  congratulations(name);
+  const startNumber = getRandomPositiveInt(maxStartNumber);
+  const step = getRandomPositiveInt(maxStep);
+  const stepsCount = getRandomPositiveInt(maxStepsCount - minStepsCount + 1) + minStepsCount - 1;
+  const progressionArray = getProgressionArray(startNumber, step, stepsCount);
+  const deletingElementIndex = getRandomPositiveInt(stepsCount) - 1;
+  const correctAnswer = progressionArray[deletingElementIndex];
+  progressionArray[deletingElementIndex] = '..';
+  const question = progressionArray.join(' ');
+  return [question, correctAnswer];
+};
+
+export default () => {
+  const condition = 'What number is missing in the progression?';
+  runGame(getQuestionAndAnswer, condition);
 };

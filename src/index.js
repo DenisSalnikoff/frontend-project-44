@@ -1,13 +1,13 @@
 import readlineSync from 'readline-sync';
 
-export const greeting = () => {
+const greeting = () => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   return name;
 };
 
-export const askQuestion = (condition, question, correctAnswer, name) => {
+const askQuestion = (condition, question, correctAnswer, name) => {
   console.log(condition);
   console.log(`Question: ${question}`);
   const answer = readlineSync.question('Your answer: ');
@@ -21,8 +21,16 @@ export const askQuestion = (condition, question, correctAnswer, name) => {
   return correct;
 };
 
-export const congratulations = (name) => {
+export const getRandomPositiveInt = (max) => Math.floor(Math.random() * max) + 1;
+
+export const runGame = (getQuestionAndAnswer, condition) => {
+  const winCount = 3;
+  const name = greeting();
+  let question;
+  let correctAnswer;
+  for (let count = 0; count < winCount; count += 1) {
+    [question, correctAnswer] = getQuestionAndAnswer();
+    if (!askQuestion(condition, question, correctAnswer, name)) return;
+  }
   console.log(`Congratulations, ${name}!`);
 };
-
-export const getRandomPositiveInt = (max) => Math.floor(Math.random() * max) + 1;

@@ -1,22 +1,7 @@
 import {
-  greeting,
-  askQuestion,
-  congratulations,
   getRandomPositiveInt,
+  runGame,
 } from '../index.js';
-
-const getRandomMathSign = () => {
-  switch (getRandomPositiveInt(3)) {
-    case 1:
-      return '+';
-    case 2:
-      return '-';
-    case 3:
-      return '*';
-    default:
-      return '!error';
-  }
-};
 
 const makeCalc = (first, sign, second) => {
   switch (sign) {
@@ -31,23 +16,21 @@ const makeCalc = (first, sign, second) => {
   }
 };
 
-export default () => {
-  // Parametrs
+const getQuestionAndAnswer = () => {
+  // Parameters
   const maxNumberHard = 99;
   const maxNumberSimple = 9;
-  const winCount = 3;
-  const condition = 'What is the result of the expression?';
 
   // Algorithm
-  const name = greeting();
-  let count;
-  for (count = 0; count < winCount; count += 1) {
-    const first = getRandomPositiveInt(maxNumberHard);
-    const sign = getRandomMathSign();
-    const second = (sign === '*') ? getRandomPositiveInt(maxNumberSimple) : getRandomPositiveInt(maxNumberHard);
-    const question = `${first} ${sign} ${second}`;
-    const correctAnswer = makeCalc(first, sign, second);
-    if (!askQuestion(condition, question, correctAnswer, name)) return;
-  }
-  congratulations(name);
+  const first = getRandomPositiveInt(maxNumberHard);
+  const sign = ['+', '-', '*'].at(getRandomPositiveInt(3) - 1);
+  const second = (sign === '*') ? getRandomPositiveInt(maxNumberSimple) : getRandomPositiveInt(maxNumberHard);
+  const question = `${first} ${sign} ${second}`;
+  const correctAnswer = makeCalc(first, sign, second);
+  return [question, correctAnswer];
+};
+
+export default () => {
+  const condition = 'What is the result of the expression?';
+  runGame(getQuestionAndAnswer, condition);
 };

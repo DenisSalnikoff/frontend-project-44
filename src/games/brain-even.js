@@ -1,23 +1,19 @@
 import {
-  greeting,
-  askQuestion,
-  congratulations,
   getRandomPositiveInt,
+  runGame,
 } from '../index.js';
 
-export default () => {
-  // Parametrs
+const getQuestionAndAnswer = () => {
+  // Parameters
   const maxQuestionNumber = 999;
-  const winCount = 3;
-  const condition = 'Answer "yes" if the number is even, otherwise answer "no".';
 
   // Algorithm
-  const name = greeting();
-  let count;
-  for (count = 0; count < winCount; count += 1) {
-    const question = getRandomPositiveInt(maxQuestionNumber);
-    const correctAnswer = question % 2 ? 'no' : 'yes';
-    if (!askQuestion(condition, question, correctAnswer, name)) return;
-  }
-  congratulations(name);
+  const question = getRandomPositiveInt(maxQuestionNumber);
+  const correctAnswer = question % 2 ? 'no' : 'yes';
+  return [question, correctAnswer];
+};
+
+export default () => {
+  const condition = 'Answer "yes" if the number is even, otherwise answer "no".';
+  runGame(getQuestionAndAnswer, condition);
 };
