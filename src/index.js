@@ -15,7 +15,7 @@ export default (getQuestionAndAnswer, condition) => {
     console.log(condition);
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-    if (answer.trim().toLocaleLowerCase() === correctAnswer.toString()) {
+    if (answer.trim().toLowerCase() === correctAnswer.toString()) {
       console.log('Correct!');
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
