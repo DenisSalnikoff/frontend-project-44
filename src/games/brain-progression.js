@@ -1,15 +1,5 @@
-import {
-  getRandomPositiveInt,
-  runGame,
-} from '../index.js';
-
-const getProgressionArray = (startNumber, step, stepCount) => {
-  const result = [startNumber];
-  for (let i = 1; i < stepCount; i += 1) {
-    result.push(result.at(-1) + step);
-  }
-  return result;
-};
+import runGame from '../index.js';
+import getRandomPositiveInt from '../getRandomPositiveInt.js';
 
 const getQuestionAndAnswer = () => {
   // Parameters
@@ -22,7 +12,10 @@ const getQuestionAndAnswer = () => {
   const startNumber = getRandomPositiveInt(maxStartNumber);
   const step = getRandomPositiveInt(maxStep);
   const stepsCount = getRandomPositiveInt(maxStepsCount - minStepsCount + 1) + minStepsCount - 1;
-  const progressionArray = getProgressionArray(startNumber, step, stepsCount);
+  const progressionArray = [startNumber];
+  for (let i = 1; i < stepsCount; i += 1) {
+    progressionArray.push(progressionArray.at(-1) + step);
+  }
   const deletingElementIndex = getRandomPositiveInt(stepsCount) - 1;
   const correctAnswer = progressionArray[deletingElementIndex];
   progressionArray[deletingElementIndex] = '..';

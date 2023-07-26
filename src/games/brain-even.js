@@ -1,7 +1,5 @@
-import {
-  getRandomPositiveInt,
-  runGame,
-} from '../index.js';
+import runGame from '../index.js';
+import getRandomPositiveInt from '../getRandomPositiveInt.js';
 
 const getQuestionAndAnswer = () => {
   // Parameters
